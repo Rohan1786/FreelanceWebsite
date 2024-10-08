@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Shopping Website</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-blue-600">ShopLogo</a>
+            <!-- Hamburger Icon for Mobile -->
+            <button id="menu-toggle" class="block lg:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <!-- Navigation Links for Desktop -->
+            <nav class="hidden lg:flex space-x-4">
+                <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Shop</a>
+                <a href="About" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </nav>
+            <!-- User Account for Desktop -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="register" class="text-gray-700 hover:text-blue-600">Login</a>
+                <a href="register" class="text-gray-700 hover:text-blue-600">Sign Up</a>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <div id="sidebar-menu"
+            class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 lg:hidden">
+            <button id="menu-close" class="absolute top-4 right-4 text-gray-700 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="flex flex-col space-y-4 p-6">
+                <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Shop</a>
+                <a href="About" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="register" class="text-gray-700 hover:text-blue-600">Login</a>
+                <a href="register" class="text-gray-700 hover:text-blue-600">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Our Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/200" alt="Product 1" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product Name 1</h3>
+                    <p class="text-gray-700 mb-4">Brief description of the product goes here.</p>
+                    <span class="text-lg font-bold text-blue-600">$29.99</span>
+                    <button
+                        class="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/200" alt="Product 2" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product Name 2</h3>
+                    <p class="text-gray-700 mb-4">Brief description of the product goes here.</p>
+                    <span class="text-lg font-bold text-blue-600">$49.99</span>
+                    <button
+                        class="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/200" alt="Product 3" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product Name 3</h3>
+                    <p class="text-gray-700 mb-4">Brief description of the product goes here.</p>
+                    <span class="text-lg font-bold text-blue-600">$19.99</span>
+                    <button
+                        class="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/200" alt="Product 4" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product Name 4</h3>
+                    <p class="text-gray-700 mb-4">Brief description of the product goes here.</p>
+                    <span class="text-lg font-bold text-blue-600">$39.99</span>
+                    <button
+                        class="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/200" alt="Product 5" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product Name 5</h3>
+                    <p class="text-gray-700 mb-4">Brief description of the product goes here.</p>
+                    <span class="text-lg font-bold text-blue-600">$59.99</span>
+                    <button
+                        class="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/200" alt="Product 6" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product Name 6</h3>
+                    <p class="text-gray-700 mb-4">Brief description of the product goes here.</p>
+                    <span class="text-lg font-bold text-blue-600">$24.99</span>
+                    <button
+                        class="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 ShopLogo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for animations and functionality -->
+    <script src="/javascripts/about.js"></script>
+</body>
+
+</html>

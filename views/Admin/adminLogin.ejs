@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Admin Header -->
+    <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <div class="text-2xl font-bold text-blue-600">Admin Dashboard</div>
+        <div class="flex items-center space-x-4">
+            <!-- Admin Name -->
+            <p class="text-gray-700"><strong>Admin:</strong> John Doe</p>
+            <!-- Logout Button -->
+            <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- User Management Section -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Manage Users</h3>
+                    <p>View and manage all registered users.</p>
+                    <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition mt-4">
+                        View Users
+                    </button>
+                </div>
+                <!-- Admin Profile Section -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Admin Profile</h3>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Email:</strong> admin@example.com</p>
+                    <button class="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition mt-4">
+                        Edit Profile
+                    </button>
+                </div>
+                <!-- Password Recovery Section -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Forgot Password</h3>
+                    <form id="forgotPasswordForm" class="flex flex-col gap-4">
+                        <label for="email" class="text-gray-700">Enter your email to reset your password:</label>
+                        <input type="email" id="email" class="border border-gray-300 rounded-md py-2 px-4"
+                            placeholder="admin@example.com" required>
+                        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
+                            Send Reset Link
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById('forgotPasswordForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            alert(`Password reset link sent to ${email}`);
+        });
+    </script>
+</body>
+
+</html>

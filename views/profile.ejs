@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+     <!-- User Dashboard Section -->
+     <section class="bg-gray-50 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">User Dashboard</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-8">
+                <!-- User Profile -->
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-4">Profile</h3>
+                    <p><strong>Name:</strong> <%= name %></p>
+                    <p><strong>Email:</strong> <%= email %></p>
+                    
+                </div>
+                <!-- Order History -->
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-4">Order History</h3>
+                    <ul>
+                        <li class="mb-2">Order #12345 - <span class="text-green-600">Delivered</span></li>
+                        <li class="mb-2">Order #67890 - <span class="text-yellow-600">Processing</span></li>
+                        <li>Order #11223 - <span class="text-red-600">Cancelled</span></li>
+                    </ul>
+                </div>
+                <!-- Account Management -->
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold mb-4">Account Management</h3>
+                    <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">Edit
+                        Profile</button>
+                    <button class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition mt-2">Logout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

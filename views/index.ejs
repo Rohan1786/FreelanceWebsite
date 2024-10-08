@@ -1,0 +1,188 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website - Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <style>
+        /* Custom animations */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-blue-600">ShopLogo</a>
+            <!-- Hamburger Icon for Mobile -->
+            <button id="menu-toggle" class="block lg:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <!-- Navigation Links for Desktop -->
+            <nav class="hidden lg:flex space-x-4">
+                <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="shop" class="text-gray-700 hover:text-blue-600">Shop</a>
+                <a href="About" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="Contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </nav>
+            <!-- User Account for Desktop -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="login" class="text-gray-700 hover:text-blue-600">Login</a>
+                <a href="register" class="text-gray-700 hover:text-blue-600">Sign Up</a>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <div id="sidebar-menu" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 lg:hidden">
+            <button id="menu-close" class="absolute top-4 right-4 text-gray-700 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="flex flex-col space-y-4 p-6">
+                <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="shop" class="text-gray-700 hover:text-blue-600">Shop</a>
+                <a href="About" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="Contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="login" class="text-gray-700 hover:text-blue-600">Login</a>
+                <a href="register" class="text-gray-700 hover:text-blue-600">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto text-center fade-in">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Our Shop!</h1>
+            <p class="text-lg mb-8">Discover our collection of exclusive products.</p>
+            <a href="shop" class="bg-white text-blue-600 py-2 px-4 rounded-md hover:bg-gray-200 transition">Start
+                Shopping</a>
+        </div>
+    </section>
+
+    <!-- shopping marketing section -->
+ <!-- Responsive Video Section -->
+
+ <section class="bg-red-300 text-white py-3 flex flex-wrap items-center justify-center" id="marketing">
+    <!-- Responsive Video Wrapper with Adjusted Size -->
+    <div class="w-full sm:w-1/2 px-4 py-2">
+        <video class="w-full h-auto rounded-lg shadow-lg" muted loop onclick="homeFunction()">
+            <source src="/videos/shop1.mp4" type="video/mp4" >
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <!-- Responsive Image Wrapper -->
+    <div class="w-full sm:w-1/2 px-4 py-2">
+        <img src="/images/beauty.jpeg" class="w-full h-auto rounded-lg shadow-lg" alt="Beauty Image" onclick="homeFunction()">
+    </div>
+</section>
+
+<!-- Tailwind CSS Styles for aspect ratio and animation -->
+<style>
+    .fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Adjusted aspect ratio utilities for a smaller video */
+    .pb-5\/12 {
+        padding-bottom: 41.67%; /* Adjusted Aspect Ratio */
+    }
+
+    .pb-3\/5 {
+        padding-bottom: 60%; /* Adjusted Aspect Ratio for smaller video */
+    }
+</style>
+
+
+
+    <!-- Product Categories -->
+    <section class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Shop by Category</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition bg-blue-200" data-aos="zoom-in">
+                    <h3 class="text-xl font-semibold mb-4">Electronics</h3>
+                    <p>Explore the latest gadgets and tech accessories.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition bg-blue-100" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-4">Fashion</h3>
+                    <p>Shop the newest trends in clothing and accessories.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition bg-blue-200" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-4">Home & Kitchen</h3>
+                    <p>Upgrade your home with top-rated appliances and decor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+   
+    <div id="cookie-banner" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg text-center hidden fade-in">
+        <p class="mb-4 text-gray-700">We use cookies to improve your experience. By continuing, you agree to our use of cookies.</p>
+        <button id="accept-cookies" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">Accept</button>
+        <button id="reject-cookies" class="bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition ml-2">Cancel</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 ShopLogo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/javascripts/home.js"></script>
+    <script>
+        AOS.init({
+          duration: 1000, // Duration of the animation in milliseconds
+          easing: 'ease-in-out', // Easing function for the animation
+          once: true, // Whether animation should happen only once - while scrolling down
+        });
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shopping Website</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-blue-600">ShopLogo</a>
+            <!-- Hamburger Icon for Mobile -->
+            <button id="menu-toggle" class="block lg:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <!-- Navigation Links for Desktop -->
+            <nav class="hidden lg:flex space-x-4">
+                <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="shop" class="text-gray-700 hover:text-blue-600">Shop</a>
+                <a href="About" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="Contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </nav>
+            <!-- User Account for Desktop -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="login" class="text-gray-700 hover:text-blue-600">Login</a>
+                <a href="register" class="text-gray-700 hover:text-blue-600">Sign Up</a>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <div id="sidebar-menu"
+            class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 lg:hidden">
+            <button id="menu-close" class="absolute top-4 right-4 text-gray-700 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="flex flex-col space-y-4 p-6">
+                <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+                <a href="shop" class="text-gray-700 hover:text-blue-600">Shop</a>
+                <a href="About" class="text-gray-700 hover:text-blue-600">About</a>
+                <a href="Contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="login" class="text-gray-700 hover:text-blue-600">Login</a>
+                <a href="register" class="text-gray-700 hover:text-blue-600">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+            <p class="text-lg mb-8">We'd love to hear from you! Whether you have questions, feedback, or need support, please get in touch.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Send
+                            Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                    <p class="text-gray-700 mb-4">Feel free to contact us via email, phone, or visit our office.</p>
+                    <ul class="text-left space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a3 3 0 003.22 0L21 8m-9 4l-7-5.03m14 0L12 12m-9 4v-6a9 9 0 0118 0v6"></path>
+                            </svg>
+                            <span>contact@shoplogo.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 10v4c0 1.657 1.343 3 3 3h2l1.586 1.586c.63.63 1.707.184 1.707-.707V17h2a3 3 0 003-3v-4"></path>
+                            </svg>
+                            <span>+123 456 7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8h18M4 6h16M5 18h14M4 10h16m-7 4h7"></path>
+                            </svg>
+                            <span>123 Main St, City, Country</span>
+                        </li>
+                    </ul>
+                    <!-- Map Embed (Placeholder) -->
+                    <div class="mt-4">
+                        <iframe class="w-full h-48 rounded-lg shadow-md"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243646.63954796338!2d-74.0059413!3d40.7127759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18b870f7%3A0x5e8b7a2392c0b1d7!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1628512214007!5m2!1sen!2sin"
+                            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 ShopLogo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for animations and functionality -->
+    <script src="/javascripts/about.js"></script>
+</body>
+
+</html>

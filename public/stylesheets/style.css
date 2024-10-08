@@ -1,0 +1,6 @@
+/* Add Tailwind classes for responsiveness */
+/* Custom CSS styles (or inline Tailwind classes) for animations */
+#sidebar-menu {
+  z-index: 50; /* Ensures the sidebar appears above other content */
+}
+
