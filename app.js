@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 var session = require('express-session');
 var nodemailer = require('nodemailer');
 const sgMail = require('@sendgrid/mail');
-const nodemailer = require('nodemailer');
+
 //nodemailer added here
 
 
