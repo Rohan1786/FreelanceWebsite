@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost:27017/newapp', { useNewUrlParser: true, useUnifiedTopology: true })
+
+mongoose.connect('mongodb://localhost:27017/newapp')
   .then(() => {
     console.log("Database connected successfully");
   })
