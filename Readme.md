@@ -6,3 +6,5 @@ if not
 npm i nodemailer 
 command for run 
  - npx nodemon
+
+now i m working Admin
