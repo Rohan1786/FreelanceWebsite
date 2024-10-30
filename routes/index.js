@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const User=require('./users');
+const Admin=require('./users');
 const mongoose = require('mongoose');
 const nodemailer=require('nodemailer');
 
@@ -146,5 +147,29 @@ router.post('/contact', async (req, res) => {
 //admin pages
 router.get('/adminlogin',(req,res)=>{
   res.render('Admin/adminLogin')
+});
+router.post('/adminRegister', async (req, res) => {
+  try {
+    const existingUser = await Admin.findOne({
+      $or: [{ name: req.body.name }, { email: req.body.email }],
+    });
+
+    if (existingUser) {
+      return res.render('Admin/adminLogin', { error: 'Admin with this name or email exists.' });
+    }
+
+    const newAdmin = new Admin({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+    });
+    await newAdmin.save();
+    return res.redirect('/');
+  } catch (error) {
+    res.render('Admin/adminLogin', { error: 'Error registering admin: ' + error.message });
+  }
+});
+router.get('/adminRegister',(req,res)=>{
+  res.render('Admin/adminRegister',error=null)
 })
 module.exports = router;
